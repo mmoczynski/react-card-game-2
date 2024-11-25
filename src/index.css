@@ -5,9 +5,115 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #21005c;
+  color: white;
+  padding: 0;
+  --radius--1: 5px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/**
+* Container
+*/
+
+  /**
+  * Container
+  */
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  .board {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background: darkblue;
+    cursor: pointer;
+    border-radius: var(--radius--1);
+  }
+  
+  .card:hover {
+    background-color: blue;;
+  }
+  
+  .card.flipped {
+    background-color: red;
+  }
+  
+  
+  .row {
+    display: flex;
+  }
+  
+  .restart-button {
+      width: 300px;
+      height: 50px;
+      background: darkblue;
+      color: white;
+      border: 0;
+      cursor: pointer;
+      border-radius: var(--radius--1);
+  }
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  background: darkblue;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: blue;;
+}
+
+.card.flipped {
+  background-color: red;
+}
+
+
+.row {
+  display: flex;
+}
+
+.scoreboard {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .card {
+    width: 50px;
+    height: 50px;
+  }
+
+  .restart-button {
+    width: px;
+  }
 }
