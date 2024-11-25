@@ -55,7 +55,7 @@ function createShuffledArr(arr) {
 
   }
 
-  console.log(randomizedIndices);
+  //console.log(randomizedIndices);
 
   // Loop through
 
@@ -74,7 +74,7 @@ function createShuffledArr(arr) {
 
 }
 
-window.createShuffledArr = createShuffledArr;
+//window.createShuffledArr = createShuffledArr;
 
 /**
  * Board
@@ -85,6 +85,12 @@ window.createShuffledArr = createShuffledArr;
 const objarr = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
 var shuffledArr = createShuffledArr(objarr);
 //var shuffledArr = objarr;
+
+/**
+ * ScoreBoard component
+ * @param {*} param0 
+ * @returns 
+ */
 
 function ScoreBoard({movecount, pairsleft, gamecompleted}) {
 
@@ -116,6 +122,8 @@ var firstCardElm;
 var secondCardElm;
 
 function App() {
+
+  // State variables
 
   var [moveCount, setMoveCount] = useState(0)
   var [pairsLeft, setPairCount] = useState(shuffledArr.length / 2);
